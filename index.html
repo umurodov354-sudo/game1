@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🧩 Boshqotirma — Pazl O'yini</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>🧩 Boshqotirma</h1>
+      <p class="subtitle">Kvadratlarni bo'sh katakka surib, tartib bilan joylashtiring</p>
+    </header>
+
+    <div class="controls">
+      <div class="control-group">
+        <label for="sizeSelect">O'lcham</label>
+        <select id="sizeSelect">
+          <option value="3">3 × 3</option>
+          <option value="4" selected>4 × 4</option>
+          <option value="5">5 × 5</option>
+        </select>
+      </div>
+      <button id="newGameBtn" class="btn primary" type="button">🔄 Yangi o'yin</button>
+      <button id="shuffleBtn" class="btn" type="button">🎲 Aralashtirish</button>
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <span class="stat-label">Yurishlar</span>
+        <span class="stat-value" id="moves">0</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Vaqt</span>
+        <span class="stat-value" id="timer">00:00</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Rekord</span>
+        <span class="stat-value" id="best">—</span>
+      </div>
+    </div>
+
+    <div id="board" class="board"></div>
+
+    <p class="hint">💡 Maslahat: klaviaturadagi ↑ ↓ ← → tugmalari bilan ham o'ynash mumkin</p>
+
+    <section class="records">
+      <h2>🏆 Rekordlar</h2>
+      <ul id="recordsList" class="records-list"></ul>
+      <button id="clearRecordsBtn" class="btn danger small" type="button">🗑 Rekordlarni tozalash</button>
+    </section>
+  </div>
+
+  <div id="winModal" class="modal">
+    <div class="modal-content">
+      <div class="emoji">🎉</div>
+      <h2>Tabriklaymiz!</h2>
+      <p id="winText"></p>
+      <button id="playAgainBtn" class="btn primary" type="button">Yana o'ynash</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
